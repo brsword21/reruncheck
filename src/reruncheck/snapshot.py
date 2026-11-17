@@ -122,7 +122,7 @@ def snapshot(root, *, ignores=(), limits=None):
                     raise ReruncheckError("max_bytes exceeded")
                 digest = hashlib.sha256()
                 file_fd = os.open(name, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK, dir_fd=fd)
-                with os.fdopen(file_fd, "rb") as stream:
+                with os.fdopen(file_fd, "rb", buffering=0) as stream:
                     if fingerprint(info) != fingerprint(os.fstat(stream.fileno())):
                         raise ReruncheckError("file changed before hashing")
                     size = 0
@@ -136,7 +136,23 @@ def snapshot(root, *, ignores=(), limits=None):
                         os.fstat(stream.fileno())
                     ):
                         raise ReruncheckError("file changed during hashing")
-                entries.append(Entry(rel, "file", mode, size, digest.hexdigest()))
+                    # Same-tick writes can preserve every metadata field. Re-read
+                    # without a userspace buffer to validate the observed content.
+                    observed_digest = digest.hexdigest()
+                    stream.seek(0)
+                    verification, verified_size = hashlib.sha256(), 0
+                    while chunk := stream.read(min(65536, size - verified_size + 1)):
+                        verified_size += len(chunk)
+                        if verified_size > size:
+                            raise ReruncheckError("file changed during hash verification")
+                        verification.update(chunk)
+                    if (
+                        verified_size != size
+                        or verification.hexdigest() != observed_digest
+                        or fingerprint(info) != fingerprint(os.fstat(stream.fileno()))
+                    ):
+                        raise ReruncheckError("file changed during hash verification")
+                entries.append(Entry(rel, "file", mode, size, observed_digest))
             else:
                 raise ReruncheckError(f"unsupported file type: {rel}")
             if fingerprint(info) != fingerprint(os.stat(name, dir_fd=fd, follow_symlinks=False)):

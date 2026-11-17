@@ -35,6 +35,8 @@ POSIX process-group cleanup reaps ordinary children; it does not contain deliber
 
 Recorded: relative path, entry kind, permissions, regular-file size/SHA-256 and literal symlink target. Root directory mode is compared too; its change uses path `.`. Empty directories and dotfiles are included. File contents and symlink directories are not followed through links.
 
+Regular-file contents are read twice through one no-follow descriptor and must agree in size and SHA-256. This detects same-tick content changes even when timestamps do not change. `--max-bytes` caps included file-content bytes per snapshot, not cumulative I/O; verification normally doubles content reads and is itself capped. It is not an atomic snapshot or a guarantee against a coordinated hostile writer.
+
 Not recorded for comparison: timestamps, ownership, ACLs, xattrs and hardlink identity. Every snapshot includes explicit coverage. A timestamp-only rewrite can therefore converge under this policy; the result is not a claim that no filesystem metadata changed.
 
 Execution preflight rejects absolute source symlinks, escaping relative links, cycles and excessive link chains—even when an ignore pattern would exclude them from measurement. Snapshot-only can record a link target without following it. Portable imported paths reject backslashes, NULs, drive-like first components, absolute/empty/dot/parent components and duplicate paths. Special files and traversal failures are errors, not omitted entries.

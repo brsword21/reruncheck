@@ -72,3 +72,22 @@ before any command launch, and the complete suite reported 108 passed. Existing
 copy/link/traversal tests plus the new regression reported 13 passed; Ruff and the
 32-file format check passed. These are finite checks, not a hostile-code sandbox
 or a claim that every possible filesystem race is prevented.
+
+## Additional coarse-timestamp content regression
+
+A fresh, project-owned Ubuntu 24.04/aarch64 VM ran the unchanged suite at the
+root-binding candidate: 107 passed and the existing
+`test_content_race_during_hashing_is_incomplete` failed because no error was raised.
+No test was skipped or weakened. A new deterministic regression freezes only the
+target inode's observed timestamps, preserves real identity/mode/size and performs
+one actual same-size content write while hashing. On macOS,
+`uv run --extra dev pytest tests/test_coarse_timestamps.py -q` first failed with
+`DID NOT RAISE ReruncheckError`.
+
+The implementation now re-reads the same descriptor without a userspace buffer,
+requires the second digest/size to agree and bounds that verification read. The
+focused content/race tests then reported 4 passed; the full macOS Python 3.12.13
+suite reported 109 passed in 9.23s, Ruff clean and 33 files already formatted.
+Other-platform and installed-artifact acceptance are separate later checks, not
+implied by that local GREEN. Two matching reads are still not an atomic snapshot
+or proof against a hostile writer.
