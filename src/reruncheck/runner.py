@@ -41,9 +41,12 @@ def check(fixture, argv, *, trust_command=False, expect=None, ignores=(), limits
         # Reject a symlink root before canonicalizing its parent path.
         if fixture.is_symlink():
             raise ReruncheckError("fixture root must not be a symlink")
-        fixture = fixture.resolve()
+        # Preserve the selected final component for no-follow I/O. Using its
+        # resolved target would accept a root swapped to an outside symlink.
+        fixture = fixture.absolute()
+        resolved_fixture = fixture.resolve()
         temp_base = Path(tempfile.gettempdir()).resolve()
-        if temp_base.is_relative_to(fixture) or (
+        if temp_base.is_relative_to(resolved_fixture) or (
             expect is not None and temp_base.is_relative_to(Path(expect).resolve())
         ):
             raise ReruncheckError("temporary directory must be outside fixture/expected tree")

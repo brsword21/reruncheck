@@ -56,3 +56,19 @@ scratch path for publication, without changing the recorded results):
 The final runs explicitly set TMPDIR to authorized scratch. The obsolete source-only pytest
 basetemp bootstrap was removed after inspecting the sdist manifest; tests now use normal pytest
 temporary handling, so the sdist does not depend on an omitted conftest file or a hard-coded home.
+
+## Additional root-binding regression
+
+A later deterministic parent probe swapped the selected fixture root to an owned
+outside-directory symlink between the early root check and path resolution. Before
+the fix, the tool observed `outside.txt` and incorrectly returned convergence/0.
+`uv run --extra dev pytest tests/test_root_binding.py -q` reproduced this as one
+failing assertion (actual exit 0 versus required error/2).
+
+The fix preserves the selected absolute path for no-follow filesystem operations;
+its resolved path is used only for temporary-directory containment checks. The same
+regression then passed (1 passed), the original standalone probe returned error/2
+before any command launch, and the complete suite reported 108 passed. Existing
+copy/link/traversal tests plus the new regression reported 13 passed; Ruff and the
+32-file format check passed. These are finite checks, not a hostile-code sandbox
+or a claim that every possible filesystem race is prevented.
