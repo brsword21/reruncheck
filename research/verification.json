@@ -1,0 +1,13 @@
+{
+  "schema_version": "reruncheck_research_validation/v1",
+  "validated_at": "2026-11-16T23:41:32.300324+00:00",
+  "validation": "passed",
+  "checks": 592,
+  "repositories": 15,
+  "pinned_studies": 3,
+  "upstream_code_executed": false,
+  "exact_utc_growth_verified": false,
+  "product_code_verified": false,
+  "curated_trends_sha256": "0b3ed50efd56924e97091e07585a7ecf66cc7ca3801d39aac788466055a04d7b",
+  "meaning": "Arithmetic/provenance checks of primary-source research; not a product-test, market-demand, exact historical net-growth or security verdict."
+}

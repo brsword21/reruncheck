@@ -1,0 +1,5000 @@
+{
+  "schema_version": "reruncheck_research/v1",
+  "requested_window": {
+    "start_date": "2026-10-17",
+    "end_date_inclusive": "2026-11-16",
+    "calendar_date_labels": 31,
+    "frozen": true,
+    "exact_utc_growth_established": false
+  },
+  "observed_retrieval_span_utc": {
+    "start": "2026-11-16T23:00:29.059190+00:00",
+    "end": "2026-11-16T23:06:45.039899+00:00"
+  },
+  "method": {
+    "primary_acquisition": "Direct urllib GET of live GitHub Trending HTML; read-only gh GraphQL metadata and pinned blobs; REST star history and Git Trees. No search snippet admitted as a metric.",
+    "selection": "All live monthly page rows were parsed. Exclude anthropics/skills because licensing not established; add one in-window-created, explicitly licensed repo. Analyst operational signal: at least 2,000 stars created in selected provider date bins, not a universal rapid-growth definition.",
+    "sampling": "Purposive monthly page + first eight star-ranked new-repo search results; not a representative or exhaustive GitHub-wide survey.",
+    "history_semantics": "GitHub documents stars created per day, grouped by calendar week, Sunday first. Week and day boundaries need not align with UTC. Counts are not reconstructed exact UTC event counts or net retained-star changes.",
+    "arithmetic": "All sums, counts, sorting, ratios, date conversions, and hashes computed in Python from observed data.",
+    "implementation_or_publication": false
+  },
+  "accepted_repository_count": 15,
+  "repositories": [
+    {
+      "repository": "cloudflare/security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "license_detected": "MIT",
+      "head_revision_observed": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8",
+      "monthly": {
+        "source_id": "monthly_html",
+        "url": "https://github.com/trending?since=monthly",
+        "retrieved_at": "2026-11-16T23:01:10.552273+00:00",
+        "page_position": 2,
+        "stars_this_month": 43540,
+        "metric_kind": "observed_display_value",
+        "exact_start": null,
+        "exact_end": null,
+        "timezone": null,
+        "scope": "GitHub label: stars this month; not assumed equal to requested dates"
+      },
+      "history": {
+        "source_id": "history_1",
+        "url": "https://api.github.com/repos/cloudflare/security-audit-skill/stargazers/history?per_page=8&page=1",
+        "retrieved_at": "2026-11-16T23:02:57.101270+00:00",
+        "raw_weekly_response": [
+          {
+            "week": 1794700800,
+            "total": 1144,
+            "days": [
+              633,
+              511,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "week": 1794096000,
+            "total": 6785,
+            "days": [
+              1121,
+              1211,
+              1268,
+              948,
+              833,
+              701,
+              703
+            ]
+          },
+          {
+            "week": 1793491200,
+            "total": 10617,
+            "days": [
+              1082,
+              989,
+              773,
+              1494,
+              2413,
+              2260,
+              1606
+            ]
+          },
+          {
+            "week": 1792886400,
+            "total": 10431,
+            "days": [
+              2204,
+              1516,
+              1671,
+              1407,
+              1164,
+              1275,
+              1194
+            ]
+          },
+          {
+            "week": 1792281600,
+            "total": 14403,
+            "days": [
+              483,
+              1532,
+              1908,
+              2656,
+              2771,
+              2451,
+              2602
+            ]
+          },
+          {
+            "week": 1791676800,
+            "total": 2807,
+            "days": [
+              422,
+              544,
+              400,
+              308,
+              294,
+              373,
+              466
+            ]
+          },
+          {
+            "week": 1791072000,
+            "total": 4055,
+            "days": [
+              488,
+              482,
+              550,
+              770,
+              442,
+              374,
+              949
+            ]
+          },
+          {
+            "week": 1790467200,
+            "total": 1866,
+            "days": [
+              344,
+              424,
+              395,
+              243,
+              168,
+              156,
+              136
+            ]
+          }
+        ],
+        "selected_daily_bins": [
+          {
+            "label_date": "2026-10-17",
+            "stars_created": 466,
+            "week_epoch": 1791676800,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-18",
+            "stars_created": 483,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-19",
+            "stars_created": 1532,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-20",
+            "stars_created": 1908,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-21",
+            "stars_created": 2656,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-22",
+            "stars_created": 2771,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-23",
+            "stars_created": 2451,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-24",
+            "stars_created": 2602,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-25",
+            "stars_created": 2204,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-26",
+            "stars_created": 1516,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-27",
+            "stars_created": 1671,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-28",
+            "stars_created": 1407,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-29",
+            "stars_created": 1164,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-30",
+            "stars_created": 1275,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-31",
+            "stars_created": 1194,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-01",
+            "stars_created": 1082,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-02",
+            "stars_created": 989,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-03",
+            "stars_created": 773,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-04",
+            "stars_created": 1494,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-05",
+            "stars_created": 2413,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-06",
+            "stars_created": 2260,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-07",
+            "stars_created": 1606,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-08",
+            "stars_created": 1121,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-09",
+            "stars_created": 1211,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-10",
+            "stars_created": 1268,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-11",
+            "stars_created": 948,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-12",
+            "stars_created": 833,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-13",
+            "stars_created": 701,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-14",
+            "stars_created": 703,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-15",
+            "stars_created": 633,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-16",
+            "stars_created": 511,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 1
+          }
+        ],
+        "selected_bin_count": 31,
+        "stars_created_in_selected_bins": 43846,
+        "metric_kind": "derived_sum_of_observed_provider_daily_counts",
+        "interval_interpretation": "Provider-calendar bins labelled 2026-10-17 through 2026-11-16, inclusive. Labels derived from week epoch + Sunday-first index; not an exact UTC interval.",
+        "utc_boundaries_verified": false,
+        "net_growth_verified": false,
+        "last_bin_partial": true,
+        "latest_nonpartial_comparison": {
+          "recent_labels": [
+            "2026-11-09",
+            "2026-11-15"
+          ],
+          "recent_stars_created": 6297,
+          "previous_labels": [
+            "2026-11-02",
+            "2026-11-08"
+          ],
+          "previous_stars_created": 10656,
+          "ratio": 0.5909,
+          "metric_kind": "derived; provider-day bins; no causal or forecast interpretation"
+        }
+      },
+      "theme": null
+    },
+    {
+      "repository": "pingdotgg/t3code",
+      "url": "https://github.com/pingdotgg/t3code",
+      "license_detected": "MIT",
+      "head_revision_observed": "b79d277cddaf65858418f29d73b87fcc3d1a19c5",
+      "monthly": {
+        "source_id": "monthly_html",
+        "url": "https://github.com/trending?since=monthly",
+        "retrieved_at": "2026-11-16T23:01:10.552273+00:00",
+        "page_position": 3,
+        "stars_this_month": 33583,
+        "metric_kind": "observed_display_value",
+        "exact_start": null,
+        "exact_end": null,
+        "timezone": null,
+        "scope": "GitHub label: stars this month; not assumed equal to requested dates"
+      },
+      "history": {
+        "source_id": "history_2",
+        "url": "https://api.github.com/repos/pingdotgg/t3code/stargazers/history?per_page=8&page=1",
+        "retrieved_at": "2026-11-16T23:02:57.038239+00:00",
+        "raw_weekly_response": [
+          {
+            "week": 1794700800,
+            "total": 1938,
+            "days": [
+              1096,
+              842,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "week": 1794096000,
+            "total": 9397,
+            "days": [
+              1404,
+              1676,
+              1506,
+              1352,
+              1341,
+              1111,
+              1007
+            ]
+          },
+          {
+            "week": 1793491200,
+            "total": 15559,
+            "days": [
+              2887,
+              3693,
+              2388,
+              2055,
+              1651,
+              1515,
+              1370
+            ]
+          },
+          {
+            "week": 1792886400,
+            "total": 6185,
+            "days": [
+              349,
+              349,
+              348,
+              326,
+              853,
+              973,
+              2987
+            ]
+          },
+          {
+            "week": 1792281600,
+            "total": 1744,
+            "days": [
+              264,
+              241,
+              260,
+              306,
+              269,
+              206,
+              198
+            ]
+          },
+          {
+            "week": 1791676800,
+            "total": 1350,
+            "days": [
+              202,
+              204,
+              208,
+              218,
+              176,
+              170,
+              172
+            ]
+          },
+          {
+            "week": 1791072000,
+            "total": 2047,
+            "days": [
+              483,
+              410,
+              238,
+              279,
+              230,
+              236,
+              171
+            ]
+          },
+          {
+            "week": 1790467200,
+            "total": 1191,
+            "days": [
+              86,
+              108,
+              108,
+              109,
+              103,
+              234,
+              443
+            ]
+          }
+        ],
+        "selected_daily_bins": [
+          {
+            "label_date": "2026-10-17",
+            "stars_created": 172,
+            "week_epoch": 1791676800,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-18",
+            "stars_created": 264,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-19",
+            "stars_created": 241,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-20",
+            "stars_created": 260,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-21",
+            "stars_created": 306,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-22",
+            "stars_created": 269,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-23",
+            "stars_created": 206,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-24",
+            "stars_created": 198,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-25",
+            "stars_created": 349,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-26",
+            "stars_created": 349,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-27",
+            "stars_created": 348,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-28",
+            "stars_created": 326,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-29",
+            "stars_created": 853,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-30",
+            "stars_created": 973,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-31",
+            "stars_created": 2987,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-01",
+            "stars_created": 2887,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-02",
+            "stars_created": 3693,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-03",
+            "stars_created": 2388,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-04",
+            "stars_created": 2055,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-05",
+            "stars_created": 1651,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-06",
+            "stars_created": 1515,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-07",
+            "stars_created": 1370,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-08",
+            "stars_created": 1404,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-09",
+            "stars_created": 1676,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-10",
+            "stars_created": 1506,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-11",
+            "stars_created": 1352,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-12",
+            "stars_created": 1341,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-13",
+            "stars_created": 1111,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-14",
+            "stars_created": 1007,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-15",
+            "stars_created": 1096,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-16",
+            "stars_created": 842,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 1
+          }
+        ],
+        "selected_bin_count": 31,
+        "stars_created_in_selected_bins": 34995,
+        "metric_kind": "derived_sum_of_observed_provider_daily_counts",
+        "interval_interpretation": "Provider-calendar bins labelled 2026-10-17 through 2026-11-16, inclusive. Labels derived from week epoch + Sunday-first index; not an exact UTC interval.",
+        "utc_boundaries_verified": false,
+        "net_growth_verified": false,
+        "last_bin_partial": true,
+        "latest_nonpartial_comparison": {
+          "recent_labels": [
+            "2026-11-09",
+            "2026-11-15"
+          ],
+          "recent_stars_created": 9089,
+          "previous_labels": [
+            "2026-11-02",
+            "2026-11-08"
+          ],
+          "previous_stars_created": 14076,
+          "ratio": 0.6457,
+          "metric_kind": "derived; provider-day bins; no causal or forecast interpretation"
+        }
+      },
+      "theme": null
+    },
+    {
+      "repository": "storytold/craft-anything",
+      "url": "https://github.com/storytold/craft-anything",
+      "license_detected": "Apache-2.0",
+      "head_revision_observed": "ad0a68a596c88f302836040e7f165ecfafa0a283",
+      "monthly": null,
+      "history": {
+        "source_id": "craft_history",
+        "url": "https://api.github.com/repos/storytold/craft-anything/stargazers/history?per_page=8&page=1",
+        "retrieved_at": "2026-11-16T23:04:06.456688+00:00",
+        "raw_weekly_response": [
+          {
+            "week": 1794700800,
+            "total": 1653,
+            "days": [
+              1073,
+              580,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "week": 1794096000,
+            "total": 11828,
+            "days": [
+              2033,
+              1796,
+              2013,
+              1813,
+              1576,
+              1231,
+              1366
+            ]
+          },
+          {
+            "week": 1793491200,
+            "total": 21081,
+            "days": [
+              1657,
+              3532,
+              3965,
+              3763,
+              2885,
+              2820,
+              2459
+            ]
+          },
+          {
+            "week": 1792886400,
+            "total": 175,
+            "days": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              175
+            ]
+          }
+        ],
+        "selected_daily_bins": [
+          {
+            "label_date": "2026-10-25",
+            "stars_created": 0,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-26",
+            "stars_created": 0,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-27",
+            "stars_created": 0,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-28",
+            "stars_created": 0,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-29",
+            "stars_created": 0,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-30",
+            "stars_created": 0,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-31",
+            "stars_created": 175,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-01",
+            "stars_created": 1657,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-02",
+            "stars_created": 3532,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-03",
+            "stars_created": 3965,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-04",
+            "stars_created": 3763,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-05",
+            "stars_created": 2885,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-06",
+            "stars_created": 2820,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-07",
+            "stars_created": 2459,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-08",
+            "stars_created": 2033,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-09",
+            "stars_created": 1796,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-10",
+            "stars_created": 2013,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-11",
+            "stars_created": 1813,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-12",
+            "stars_created": 1576,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-13",
+            "stars_created": 1231,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-14",
+            "stars_created": 1366,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-15",
+            "stars_created": 1073,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-16",
+            "stars_created": 580,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 1
+          }
+        ],
+        "selected_bin_count": 23,
+        "stars_created_in_selected_bins": 34737,
+        "metric_kind": "derived_sum_of_observed_provider_daily_counts",
+        "interval_interpretation": "Provider-calendar bins labelled 2026-10-17 through 2026-11-16, inclusive. Labels derived from week epoch + Sunday-first index; not an exact UTC interval.",
+        "utc_boundaries_verified": false,
+        "net_growth_verified": false,
+        "last_bin_partial": true,
+        "latest_nonpartial_comparison": {
+          "recent_labels": [
+            "2026-11-09",
+            "2026-11-15"
+          ],
+          "recent_stars_created": 10868,
+          "previous_labels": [
+            "2026-11-02",
+            "2026-11-08"
+          ],
+          "previous_stars_created": 21457,
+          "ratio": 0.5065,
+          "metric_kind": "derived; provider-day bins; no causal or forecast interpretation"
+        }
+      },
+      "theme": null
+    },
+    {
+      "repository": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "license_detected": "Apache-2.0",
+      "head_revision_observed": "d41d9860b0094dcb68030657da63461212835aaa",
+      "monthly": {
+        "source_id": "monthly_html",
+        "url": "https://github.com/trending?since=monthly",
+        "retrieved_at": "2026-11-16T23:01:10.552273+00:00",
+        "page_position": 6,
+        "stars_this_month": 29631,
+        "metric_kind": "observed_display_value",
+        "exact_start": null,
+        "exact_end": null,
+        "timezone": null,
+        "scope": "GitHub label: stars this month; not assumed equal to requested dates"
+      },
+      "history": {
+        "source_id": "history_5",
+        "url": "https://api.github.com/repos/pbakaus/impeccable/stargazers/history?per_page=8&page=1",
+        "retrieved_at": "2026-11-16T23:02:57.550500+00:00",
+        "raw_weekly_response": [
+          {
+            "week": 1794700800,
+            "total": 1027,
+            "days": [
+              599,
+              428,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "week": 1794096000,
+            "total": 4755,
+            "days": [
+              692,
+              707,
+              706,
+              775,
+              647,
+              626,
+              602
+            ]
+          },
+          {
+            "week": 1793491200,
+            "total": 7310,
+            "days": [
+              1208,
+              1114,
+              1020,
+              1340,
+              1086,
+              788,
+              754
+            ]
+          },
+          {
+            "week": 1792886400,
+            "total": 11994,
+            "days": [
+              1460,
+              1459,
+              1449,
+              2514,
+              2440,
+              1503,
+              1169
+            ]
+          },
+          {
+            "week": 1792281600,
+            "total": 4308,
+            "days": [
+              388,
+              564,
+              656,
+              594,
+              550,
+              573,
+              983
+            ]
+          },
+          {
+            "week": 1791676800,
+            "total": 2999,
+            "days": [
+              473,
+              437,
+              488,
+              443,
+              424,
+              390,
+              344
+            ]
+          },
+          {
+            "week": 1791072000,
+            "total": 4030,
+            "days": [
+              973,
+              688,
+              692,
+              497,
+              388,
+              376,
+              416
+            ]
+          },
+          {
+            "week": 1790467200,
+            "total": 3983,
+            "days": [
+              265,
+              365,
+              455,
+              480,
+              693,
+              667,
+              1058
+            ]
+          }
+        ],
+        "selected_daily_bins": [
+          {
+            "label_date": "2026-10-17",
+            "stars_created": 344,
+            "week_epoch": 1791676800,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-18",
+            "stars_created": 388,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-19",
+            "stars_created": 564,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-20",
+            "stars_created": 656,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-21",
+            "stars_created": 594,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-22",
+            "stars_created": 550,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-23",
+            "stars_created": 573,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-24",
+            "stars_created": 983,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-25",
+            "stars_created": 1460,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-26",
+            "stars_created": 1459,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-27",
+            "stars_created": 1449,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-28",
+            "stars_created": 2514,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-29",
+            "stars_created": 2440,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-30",
+            "stars_created": 1503,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-31",
+            "stars_created": 1169,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-01",
+            "stars_created": 1208,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-02",
+            "stars_created": 1114,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-03",
+            "stars_created": 1020,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-04",
+            "stars_created": 1340,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-05",
+            "stars_created": 1086,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-06",
+            "stars_created": 788,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-07",
+            "stars_created": 754,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-08",
+            "stars_created": 692,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-09",
+            "stars_created": 707,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-10",
+            "stars_created": 706,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-11",
+            "stars_created": 775,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-12",
+            "stars_created": 647,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-13",
+            "stars_created": 626,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-14",
+            "stars_created": 602,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-15",
+            "stars_created": 599,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-16",
+            "stars_created": 428,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 1
+          }
+        ],
+        "selected_bin_count": 31,
+        "stars_created_in_selected_bins": 29738,
+        "metric_kind": "derived_sum_of_observed_provider_daily_counts",
+        "interval_interpretation": "Provider-calendar bins labelled 2026-10-17 through 2026-11-16, inclusive. Labels derived from week epoch + Sunday-first index; not an exact UTC interval.",
+        "utc_boundaries_verified": false,
+        "net_growth_verified": false,
+        "last_bin_partial": true,
+        "latest_nonpartial_comparison": {
+          "recent_labels": [
+            "2026-11-09",
+            "2026-11-15"
+          ],
+          "recent_stars_created": 4662,
+          "previous_labels": [
+            "2026-11-02",
+            "2026-11-08"
+          ],
+          "previous_stars_created": 6794,
+          "ratio": 0.6862,
+          "metric_kind": "derived; provider-day bins; no causal or forecast interpretation"
+        }
+      },
+      "theme": null
+    },
+    {
+      "repository": "Nutlope/hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "license_detected": "MIT",
+      "head_revision_observed": "04977e15f3dfd6ee4b74c887dac3eb52665d6c92",
+      "monthly": {
+        "source_id": "monthly_html",
+        "url": "https://github.com/trending?since=monthly",
+        "retrieved_at": "2026-11-16T23:01:10.552273+00:00",
+        "page_position": 1,
+        "stars_this_month": 25448,
+        "metric_kind": "observed_display_value",
+        "exact_start": null,
+        "exact_end": null,
+        "timezone": null,
+        "scope": "GitHub label: stars this month; not assumed equal to requested dates"
+      },
+      "history": {
+        "source_id": "hallmark_history",
+        "url": "https://api.github.com/repos/Nutlope/hallmark/stargazers/history?per_page=8&page=1",
+        "retrieved_at": "2026-11-16T23:01:09.172432+00:00",
+        "raw_weekly_response": [
+          {
+            "week": 1794700800,
+            "total": 961,
+            "days": [
+              551,
+              410,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "week": 1794096000,
+            "total": 4779,
+            "days": [
+              771,
+              796,
+              875,
+              756,
+              590,
+              472,
+              519
+            ]
+          },
+          {
+            "week": 1793491200,
+            "total": 6389,
+            "days": [
+              1119,
+              1051,
+              988,
+              954,
+              830,
+              776,
+              671
+            ]
+          },
+          {
+            "week": 1792886400,
+            "total": 11675,
+            "days": [
+              1990,
+              2659,
+              2309,
+              1623,
+              1212,
+              957,
+              925
+            ]
+          },
+          {
+            "week": 1792281600,
+            "total": 2220,
+            "days": [
+              69,
+              57,
+              78,
+              106,
+              345,
+              493,
+              1072
+            ]
+          },
+          {
+            "week": 1791676800,
+            "total": 437,
+            "days": [
+              51,
+              42,
+              59,
+              62,
+              96,
+              69,
+              58
+            ]
+          },
+          {
+            "week": 1791072000,
+            "total": 432,
+            "days": [
+              103,
+              99,
+              40,
+              48,
+              45,
+              57,
+              40
+            ]
+          },
+          {
+            "week": 1790467200,
+            "total": 315,
+            "days": [
+              32,
+              55,
+              51,
+              59,
+              43,
+              28,
+              47
+            ]
+          }
+        ],
+        "selected_daily_bins": [
+          {
+            "label_date": "2026-10-17",
+            "stars_created": 58,
+            "week_epoch": 1791676800,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-18",
+            "stars_created": 69,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-19",
+            "stars_created": 57,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-20",
+            "stars_created": 78,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-21",
+            "stars_created": 106,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-22",
+            "stars_created": 345,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-23",
+            "stars_created": 493,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-24",
+            "stars_created": 1072,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-25",
+            "stars_created": 1990,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-26",
+            "stars_created": 2659,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-27",
+            "stars_created": 2309,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-28",
+            "stars_created": 1623,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-29",
+            "stars_created": 1212,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-30",
+            "stars_created": 957,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-31",
+            "stars_created": 925,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-01",
+            "stars_created": 1119,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-02",
+            "stars_created": 1051,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-03",
+            "stars_created": 988,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-04",
+            "stars_created": 954,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-05",
+            "stars_created": 830,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-06",
+            "stars_created": 776,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-07",
+            "stars_created": 671,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-08",
+            "stars_created": 771,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-09",
+            "stars_created": 796,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-10",
+            "stars_created": 875,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-11",
+            "stars_created": 756,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-12",
+            "stars_created": 590,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-13",
+            "stars_created": 472,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-14",
+            "stars_created": 519,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-15",
+            "stars_created": 551,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-16",
+            "stars_created": 410,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 1
+          }
+        ],
+        "selected_bin_count": 31,
+        "stars_created_in_selected_bins": 26082,
+        "metric_kind": "derived_sum_of_observed_provider_daily_counts",
+        "interval_interpretation": "Provider-calendar bins labelled 2026-10-17 through 2026-11-16, inclusive. Labels derived from week epoch + Sunday-first index; not an exact UTC interval.",
+        "utc_boundaries_verified": false,
+        "net_growth_verified": false,
+        "last_bin_partial": true,
+        "latest_nonpartial_comparison": {
+          "recent_labels": [
+            "2026-11-09",
+            "2026-11-15"
+          ],
+          "recent_stars_created": 4559,
+          "previous_labels": [
+            "2026-11-02",
+            "2026-11-08"
+          ],
+          "previous_stars_created": 6041,
+          "ratio": 0.7547,
+          "metric_kind": "derived; provider-day bins; no causal or forecast interpretation"
+        }
+      },
+      "theme": null
+    },
+    {
+      "repository": "heygen-com/hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "license_detected": "Apache-2.0",
+      "head_revision_observed": "33e1a36a3973dd587a2921575b0d399fb066d740",
+      "monthly": {
+        "source_id": "monthly_html",
+        "url": "https://github.com/trending?since=monthly",
+        "retrieved_at": "2026-11-16T23:01:10.552273+00:00",
+        "page_position": 8,
+        "stars_this_month": 20878,
+        "metric_kind": "observed_display_value",
+        "exact_start": null,
+        "exact_end": null,
+        "timezone": null,
+        "scope": "GitHub label: stars this month; not assumed equal to requested dates"
+      },
+      "history": {
+        "source_id": "history_7",
+        "url": "https://api.github.com/repos/heygen-com/hyperframes/stargazers/history?per_page=8&page=1",
+        "retrieved_at": "2026-11-16T23:02:57.571844+00:00",
+        "raw_weekly_response": [
+          {
+            "week": 1794700800,
+            "total": 786,
+            "days": [
+              445,
+              341,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "week": 1794096000,
+            "total": 3835,
+            "days": [
+              585,
+              623,
+              586,
+              646,
+              514,
+              477,
+              404
+            ]
+          },
+          {
+            "week": 1793491200,
+            "total": 4109,
+            "days": [
+              638,
+              622,
+              622,
+              621,
+              624,
+              478,
+              504
+            ]
+          },
+          {
+            "week": 1792886400,
+            "total": 5157,
+            "days": [
+              803,
+              942,
+              838,
+              798,
+              685,
+              562,
+              529
+            ]
+          },
+          {
+            "week": 1792281600,
+            "total": 5527,
+            "days": [
+              838,
+              902,
+              811,
+              747,
+              788,
+              780,
+              661
+            ]
+          },
+          {
+            "week": 1791676800,
+            "total": 5742,
+            "days": [
+              751,
+              810,
+              1050,
+              875,
+              860,
+              719,
+              677
+            ]
+          },
+          {
+            "week": 1791072000,
+            "total": 4130,
+            "days": [
+              521,
+              559,
+              653,
+              648,
+              632,
+              608,
+              509
+            ]
+          },
+          {
+            "week": 1790467200,
+            "total": 3021,
+            "days": [
+              316,
+              286,
+              341,
+              564,
+              600,
+              532,
+              382
+            ]
+          }
+        ],
+        "selected_daily_bins": [
+          {
+            "label_date": "2026-10-17",
+            "stars_created": 677,
+            "week_epoch": 1791676800,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-18",
+            "stars_created": 838,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-19",
+            "stars_created": 902,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-20",
+            "stars_created": 811,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-21",
+            "stars_created": 747,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-22",
+            "stars_created": 788,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-23",
+            "stars_created": 780,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-24",
+            "stars_created": 661,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-25",
+            "stars_created": 803,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-26",
+            "stars_created": 942,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-27",
+            "stars_created": 838,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-28",
+            "stars_created": 798,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-29",
+            "stars_created": 685,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-30",
+            "stars_created": 562,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-31",
+            "stars_created": 529,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-01",
+            "stars_created": 638,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-02",
+            "stars_created": 622,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-03",
+            "stars_created": 622,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-04",
+            "stars_created": 621,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-05",
+            "stars_created": 624,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-06",
+            "stars_created": 478,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-07",
+            "stars_created": 504,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-08",
+            "stars_created": 585,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-09",
+            "stars_created": 623,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-10",
+            "stars_created": 586,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-11",
+            "stars_created": 646,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-12",
+            "stars_created": 514,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-13",
+            "stars_created": 477,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-14",
+            "stars_created": 404,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-15",
+            "stars_created": 445,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-16",
+            "stars_created": 341,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 1
+          }
+        ],
+        "selected_bin_count": 31,
+        "stars_created_in_selected_bins": 20091,
+        "metric_kind": "derived_sum_of_observed_provider_daily_counts",
+        "interval_interpretation": "Provider-calendar bins labelled 2026-10-17 through 2026-11-16, inclusive. Labels derived from week epoch + Sunday-first index; not an exact UTC interval.",
+        "utc_boundaries_verified": false,
+        "net_growth_verified": false,
+        "last_bin_partial": true,
+        "latest_nonpartial_comparison": {
+          "recent_labels": [
+            "2026-11-09",
+            "2026-11-15"
+          ],
+          "recent_stars_created": 3695,
+          "previous_labels": [
+            "2026-11-02",
+            "2026-11-08"
+          ],
+          "previous_stars_created": 4056,
+          "ratio": 0.911,
+          "metric_kind": "derived; provider-day bins; no causal or forecast interpretation"
+        }
+      },
+      "theme": null
+    },
+    {
+      "repository": "Leonxlnx/taste-skill",
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "license_detected": "MIT",
+      "head_revision_observed": "f6b76575f949707b4e3c37cd86cb44b0b98643e8",
+      "monthly": {
+        "source_id": "monthly_html",
+        "url": "https://github.com/trending?since=monthly",
+        "retrieved_at": "2026-11-16T23:01:10.552273+00:00",
+        "page_position": 10,
+        "stars_this_month": 19546,
+        "metric_kind": "observed_display_value",
+        "exact_start": null,
+        "exact_end": null,
+        "timezone": null,
+        "scope": "GitHub label: stars this month; not assumed equal to requested dates"
+      },
+      "history": {
+        "source_id": "history_9",
+        "url": "https://api.github.com/repos/Leonxlnx/taste-skill/stargazers/history?per_page=8&page=1",
+        "retrieved_at": "2026-11-16T23:02:57.949334+00:00",
+        "raw_weekly_response": [
+          {
+            "week": 1794700800,
+            "total": 1127,
+            "days": [
+              657,
+              470,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "week": 1794096000,
+            "total": 4140,
+            "days": [
+              437,
+              516,
+              474,
+              680,
+              776,
+              661,
+              596
+            ]
+          },
+          {
+            "week": 1793491200,
+            "total": 4649,
+            "days": [
+              888,
+              955,
+              667,
+              557,
+              695,
+              435,
+              452
+            ]
+          },
+          {
+            "week": 1792886400,
+            "total": 5198,
+            "days": [
+              530,
+              560,
+              693,
+              957,
+              964,
+              739,
+              755
+            ]
+          },
+          {
+            "week": 1792281600,
+            "total": 3688,
+            "days": [
+              451,
+              545,
+              544,
+              719,
+              546,
+              452,
+              431
+            ]
+          },
+          {
+            "week": 1791676800,
+            "total": 4170,
+            "days": [
+              367,
+              415,
+              522,
+              983,
+              870,
+              581,
+              432
+            ]
+          },
+          {
+            "week": 1791072000,
+            "total": 2188,
+            "days": [
+              263,
+              284,
+              314,
+              372,
+              328,
+              323,
+              304
+            ]
+          },
+          {
+            "week": 1790467200,
+            "total": 2047,
+            "days": [
+              281,
+              322,
+              323,
+              283,
+              282,
+              270,
+              286
+            ]
+          }
+        ],
+        "selected_daily_bins": [
+          {
+            "label_date": "2026-10-17",
+            "stars_created": 432,
+            "week_epoch": 1791676800,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-18",
+            "stars_created": 451,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-19",
+            "stars_created": 545,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-20",
+            "stars_created": 544,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-21",
+            "stars_created": 719,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-22",
+            "stars_created": 546,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-23",
+            "stars_created": 452,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-24",
+            "stars_created": 431,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-25",
+            "stars_created": 530,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-26",
+            "stars_created": 560,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-27",
+            "stars_created": 693,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-28",
+            "stars_created": 957,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-29",
+            "stars_created": 964,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-30",
+            "stars_created": 739,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-31",
+            "stars_created": 755,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-01",
+            "stars_created": 888,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-02",
+            "stars_created": 955,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-03",
+            "stars_created": 667,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-04",
+            "stars_created": 557,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-05",
+            "stars_created": 695,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-06",
+            "stars_created": 435,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-07",
+            "stars_created": 452,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-08",
+            "stars_created": 437,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-09",
+            "stars_created": 516,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-10",
+            "stars_created": 474,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-11",
+            "stars_created": 680,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-12",
+            "stars_created": 776,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-13",
+            "stars_created": 661,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-14",
+            "stars_created": 596,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-15",
+            "stars_created": 657,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-16",
+            "stars_created": 470,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 1
+          }
+        ],
+        "selected_bin_count": 31,
+        "stars_created_in_selected_bins": 19234,
+        "metric_kind": "derived_sum_of_observed_provider_daily_counts",
+        "interval_interpretation": "Provider-calendar bins labelled 2026-10-17 through 2026-11-16, inclusive. Labels derived from week epoch + Sunday-first index; not an exact UTC interval.",
+        "utc_boundaries_verified": false,
+        "net_growth_verified": false,
+        "last_bin_partial": true,
+        "latest_nonpartial_comparison": {
+          "recent_labels": [
+            "2026-11-09",
+            "2026-11-15"
+          ],
+          "recent_stars_created": 4360,
+          "previous_labels": [
+            "2026-11-02",
+            "2026-11-08"
+          ],
+          "previous_stars_created": 4198,
+          "ratio": 1.0386,
+          "metric_kind": "derived; provider-day bins; no causal or forecast interpretation"
+        }
+      },
+      "theme": null
+    },
+    {
+      "repository": "sherlock-project/sherlock",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "license_detected": "MIT",
+      "head_revision_observed": "c588d7c8b476df9f9c84912a05d1430fb8cdcdae",
+      "monthly": {
+        "source_id": "monthly_html",
+        "url": "https://github.com/trending?since=monthly",
+        "retrieved_at": "2026-11-16T23:01:10.552273+00:00",
+        "page_position": 9,
+        "stars_this_month": 18371,
+        "metric_kind": "observed_display_value",
+        "exact_start": null,
+        "exact_end": null,
+        "timezone": null,
+        "scope": "GitHub label: stars this month; not assumed equal to requested dates"
+      },
+      "history": {
+        "source_id": "history_8",
+        "url": "https://api.github.com/repos/sherlock-project/sherlock/stargazers/history?per_page=8&page=1",
+        "retrieved_at": "2026-11-16T23:02:57.555652+00:00",
+        "raw_weekly_response": [
+          {
+            "week": 1794700800,
+            "total": 1220,
+            "days": [
+              798,
+              422,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "week": 1794096000,
+            "total": 10843,
+            "days": [
+              3835,
+              2810,
+              1662,
+              836,
+              448,
+              644,
+              608
+            ]
+          },
+          {
+            "week": 1793491200,
+            "total": 5881,
+            "days": [
+              61,
+              66,
+              79,
+              173,
+              1408,
+              1828,
+              2266
+            ]
+          },
+          {
+            "week": 1792886400,
+            "total": 525,
+            "days": [
+              65,
+              66,
+              87,
+              107,
+              74,
+              58,
+              68
+            ]
+          },
+          {
+            "week": 1792281600,
+            "total": 534,
+            "days": [
+              67,
+              86,
+              91,
+              78,
+              76,
+              70,
+              66
+            ]
+          },
+          {
+            "week": 1791676800,
+            "total": 642,
+            "days": [
+              149,
+              102,
+              84,
+              66,
+              74,
+              90,
+              77
+            ]
+          },
+          {
+            "week": 1791072000,
+            "total": 647,
+            "days": [
+              54,
+              57,
+              80,
+              172,
+              111,
+              105,
+              68
+            ]
+          },
+          {
+            "week": 1790467200,
+            "total": 393,
+            "days": [
+              81,
+              67,
+              52,
+              47,
+              48,
+              59,
+              39
+            ]
+          }
+        ],
+        "selected_daily_bins": [
+          {
+            "label_date": "2026-10-17",
+            "stars_created": 77,
+            "week_epoch": 1791676800,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-18",
+            "stars_created": 67,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-19",
+            "stars_created": 86,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-20",
+            "stars_created": 91,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-21",
+            "stars_created": 78,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-22",
+            "stars_created": 76,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-23",
+            "stars_created": 70,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-24",
+            "stars_created": 66,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-25",
+            "stars_created": 65,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-26",
+            "stars_created": 66,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-27",
+            "stars_created": 87,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-28",
+            "stars_created": 107,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-29",
+            "stars_created": 74,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-30",
+            "stars_created": 58,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-31",
+            "stars_created": 68,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-01",
+            "stars_created": 61,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-02",
+            "stars_created": 66,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-03",
+            "stars_created": 79,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-04",
+            "stars_created": 173,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-05",
+            "stars_created": 1408,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-06",
+            "stars_created": 1828,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-07",
+            "stars_created": 2266,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-08",
+            "stars_created": 3835,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-09",
+            "stars_created": 2810,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-10",
+            "stars_created": 1662,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-11",
+            "stars_created": 836,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-12",
+            "stars_created": 448,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-13",
+            "stars_created": 644,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-14",
+            "stars_created": 608,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-15",
+            "stars_created": 798,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-16",
+            "stars_created": 422,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 1
+          }
+        ],
+        "selected_bin_count": 31,
+        "stars_created_in_selected_bins": 19080,
+        "metric_kind": "derived_sum_of_observed_provider_daily_counts",
+        "interval_interpretation": "Provider-calendar bins labelled 2026-10-17 through 2026-11-16, inclusive. Labels derived from week epoch + Sunday-first index; not an exact UTC interval.",
+        "utc_boundaries_verified": false,
+        "net_growth_verified": false,
+        "last_bin_partial": true,
+        "latest_nonpartial_comparison": {
+          "recent_labels": [
+            "2026-11-09",
+            "2026-11-15"
+          ],
+          "recent_stars_created": 7806,
+          "previous_labels": [
+            "2026-11-02",
+            "2026-11-08"
+          ],
+          "previous_stars_created": 9655,
+          "ratio": 0.8085,
+          "metric_kind": "derived; provider-day bins; no causal or forecast interpretation"
+        }
+      },
+      "theme": null
+    },
+    {
+      "repository": "HKUDS/DeepTutor",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "license_detected": "Apache-2.0",
+      "head_revision_observed": "4c1e000d8563c5ac3b231baaaf149dc4dc4d2406",
+      "monthly": {
+        "source_id": "monthly_html",
+        "url": "https://github.com/trending?since=monthly",
+        "retrieved_at": "2026-11-16T23:01:10.552273+00:00",
+        "page_position": 7,
+        "stars_this_month": 18278,
+        "metric_kind": "observed_display_value",
+        "exact_start": null,
+        "exact_end": null,
+        "timezone": null,
+        "scope": "GitHub label: stars this month; not assumed equal to requested dates"
+      },
+      "history": {
+        "source_id": "history_6",
+        "url": "https://api.github.com/repos/HKUDS/DeepTutor/stargazers/history?per_page=8&page=1",
+        "retrieved_at": "2026-11-16T23:02:57.574053+00:00",
+        "raw_weekly_response": [
+          {
+            "week": 1794700800,
+            "total": 468,
+            "days": [
+              283,
+              185,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "week": 1794096000,
+            "total": 2873,
+            "days": [
+              751,
+              512,
+              368,
+              362,
+              304,
+              285,
+              291
+            ]
+          },
+          {
+            "week": 1793491200,
+            "total": 3475,
+            "days": [
+              853,
+              531,
+              382,
+              324,
+              488,
+              479,
+              418
+            ]
+          },
+          {
+            "week": 1792886400,
+            "total": 10566,
+            "days": [
+              322,
+              1467,
+              2239,
+              2003,
+              2211,
+              1209,
+              1115
+            ]
+          },
+          {
+            "week": 1792281600,
+            "total": 1025,
+            "days": [
+              103,
+              162,
+              112,
+              124,
+              146,
+              143,
+              235
+            ]
+          },
+          {
+            "week": 1791676800,
+            "total": 507,
+            "days": [
+              57,
+              76,
+              114,
+              77,
+              64,
+              56,
+              63
+            ]
+          },
+          {
+            "week": 1791072000,
+            "total": 398,
+            "days": [
+              45,
+              38,
+              40,
+              56,
+              68,
+              89,
+              62
+            ]
+          },
+          {
+            "week": 1790467200,
+            "total": 465,
+            "days": [
+              45,
+              94,
+              61,
+              72,
+              41,
+              103,
+              49
+            ]
+          }
+        ],
+        "selected_daily_bins": [
+          {
+            "label_date": "2026-10-17",
+            "stars_created": 63,
+            "week_epoch": 1791676800,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-18",
+            "stars_created": 103,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-19",
+            "stars_created": 162,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-20",
+            "stars_created": 112,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-21",
+            "stars_created": 124,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-22",
+            "stars_created": 146,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-23",
+            "stars_created": 143,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-24",
+            "stars_created": 235,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-25",
+            "stars_created": 322,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-26",
+            "stars_created": 1467,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-27",
+            "stars_created": 2239,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-28",
+            "stars_created": 2003,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-29",
+            "stars_created": 2211,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-30",
+            "stars_created": 1209,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-31",
+            "stars_created": 1115,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-01",
+            "stars_created": 853,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-02",
+            "stars_created": 531,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-03",
+            "stars_created": 382,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-04",
+            "stars_created": 324,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-05",
+            "stars_created": 488,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-06",
+            "stars_created": 479,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-07",
+            "stars_created": 418,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-08",
+            "stars_created": 751,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-09",
+            "stars_created": 512,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-10",
+            "stars_created": 368,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-11",
+            "stars_created": 362,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-12",
+            "stars_created": 304,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-13",
+            "stars_created": 285,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-14",
+            "stars_created": 291,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-15",
+            "stars_created": 283,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-16",
+            "stars_created": 185,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 1
+          }
+        ],
+        "selected_bin_count": 31,
+        "stars_created_in_selected_bins": 18470,
+        "metric_kind": "derived_sum_of_observed_provider_daily_counts",
+        "interval_interpretation": "Provider-calendar bins labelled 2026-10-17 through 2026-11-16, inclusive. Labels derived from week epoch + Sunday-first index; not an exact UTC interval.",
+        "utc_boundaries_verified": false,
+        "net_growth_verified": false,
+        "last_bin_partial": true,
+        "latest_nonpartial_comparison": {
+          "recent_labels": [
+            "2026-11-09",
+            "2026-11-15"
+          ],
+          "recent_stars_created": 2405,
+          "previous_labels": [
+            "2026-11-02",
+            "2026-11-08"
+          ],
+          "previous_stars_created": 3373,
+          "ratio": 0.713,
+          "metric_kind": "derived; provider-day bins; no causal or forecast interpretation"
+        }
+      },
+      "theme": null
+    },
+    {
+      "repository": "thedotmack/claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "license_detected": "Apache-2.0",
+      "head_revision_observed": "82d3602e2e43503ffd39c180b2af5f7521fc457b",
+      "monthly": {
+        "source_id": "monthly_html",
+        "url": "https://github.com/trending?since=monthly",
+        "retrieved_at": "2026-11-16T23:01:10.552273+00:00",
+        "page_position": 4,
+        "stars_this_month": 17038,
+        "metric_kind": "observed_display_value",
+        "exact_start": null,
+        "exact_end": null,
+        "timezone": null,
+        "scope": "GitHub label: stars this month; not assumed equal to requested dates"
+      },
+      "history": {
+        "source_id": "history_3",
+        "url": "https://api.github.com/repos/thedotmack/claude-mem/stargazers/history?per_page=8&page=1",
+        "retrieved_at": "2026-11-16T23:02:57.045864+00:00",
+        "raw_weekly_response": [
+          {
+            "week": 1794700800,
+            "total": 526,
+            "days": [
+              302,
+              224,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "week": 1794096000,
+            "total": 2731,
+            "days": [
+              479,
+              487,
+              453,
+              390,
+              335,
+              293,
+              294
+            ]
+          },
+          {
+            "week": 1793491200,
+            "total": 6589,
+            "days": [
+              1749,
+              1214,
+              1171,
+              906,
+              593,
+              470,
+              486
+            ]
+          },
+          {
+            "week": 1792886400,
+            "total": 5379,
+            "days": [
+              326,
+              333,
+              300,
+              332,
+              965,
+              1614,
+              1509
+            ]
+          },
+          {
+            "week": 1792281600,
+            "total": 1507,
+            "days": [
+              210,
+              193,
+              175,
+              204,
+              194,
+              255,
+              276
+            ]
+          },
+          {
+            "week": 1791676800,
+            "total": 2206,
+            "days": [
+              484,
+              381,
+              347,
+              321,
+              291,
+              166,
+              216
+            ]
+          },
+          {
+            "week": 1791072000,
+            "total": 3736,
+            "days": [
+              541,
+              491,
+              577,
+              629,
+              799,
+              354,
+              345
+            ]
+          },
+          {
+            "week": 1790467200,
+            "total": 1055,
+            "days": [
+              71,
+              78,
+              101,
+              87,
+              128,
+              76,
+              514
+            ]
+          }
+        ],
+        "selected_daily_bins": [
+          {
+            "label_date": "2026-10-17",
+            "stars_created": 216,
+            "week_epoch": 1791676800,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-18",
+            "stars_created": 210,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-19",
+            "stars_created": 193,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-20",
+            "stars_created": 175,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-21",
+            "stars_created": 204,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-22",
+            "stars_created": 194,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-23",
+            "stars_created": 255,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-24",
+            "stars_created": 276,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-25",
+            "stars_created": 326,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-26",
+            "stars_created": 333,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-27",
+            "stars_created": 300,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-28",
+            "stars_created": 332,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-29",
+            "stars_created": 965,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-30",
+            "stars_created": 1614,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-31",
+            "stars_created": 1509,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-01",
+            "stars_created": 1749,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-02",
+            "stars_created": 1214,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-03",
+            "stars_created": 1171,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-04",
+            "stars_created": 906,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-05",
+            "stars_created": 593,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-06",
+            "stars_created": 470,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-07",
+            "stars_created": 486,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-08",
+            "stars_created": 479,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-09",
+            "stars_created": 487,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-10",
+            "stars_created": 453,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-11",
+            "stars_created": 390,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-12",
+            "stars_created": 335,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-13",
+            "stars_created": 293,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-14",
+            "stars_created": 294,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-15",
+            "stars_created": 302,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-16",
+            "stars_created": 224,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 1
+          }
+        ],
+        "selected_bin_count": 31,
+        "stars_created_in_selected_bins": 16948,
+        "metric_kind": "derived_sum_of_observed_provider_daily_counts",
+        "interval_interpretation": "Provider-calendar bins labelled 2026-10-17 through 2026-11-16, inclusive. Labels derived from week epoch + Sunday-first index; not an exact UTC interval.",
+        "utc_boundaries_verified": false,
+        "net_growth_verified": false,
+        "last_bin_partial": true,
+        "latest_nonpartial_comparison": {
+          "recent_labels": [
+            "2026-11-09",
+            "2026-11-15"
+          ],
+          "recent_stars_created": 2554,
+          "previous_labels": [
+            "2026-11-02",
+            "2026-11-08"
+          ],
+          "previous_stars_created": 5319,
+          "ratio": 0.4802,
+          "metric_kind": "derived; provider-day bins; no causal or forecast interpretation"
+        }
+      },
+      "theme": null
+    },
+    {
+      "repository": "AgriciDaniel/claude-seo",
+      "url": "https://github.com/AgriciDaniel/claude-seo",
+      "license_detected": "MIT",
+      "head_revision_observed": "468ed5b0d9e3249394783710e54abb02837e326b",
+      "monthly": {
+        "source_id": "monthly_html",
+        "url": "https://github.com/trending?since=monthly",
+        "retrieved_at": "2026-11-16T23:01:10.552273+00:00",
+        "page_position": 11,
+        "stars_this_month": 10672,
+        "metric_kind": "observed_display_value",
+        "exact_start": null,
+        "exact_end": null,
+        "timezone": null,
+        "scope": "GitHub label: stars this month; not assumed equal to requested dates"
+      },
+      "history": {
+        "source_id": "history_10",
+        "url": "https://api.github.com/repos/AgriciDaniel/claude-seo/stargazers/history?per_page=8&page=1",
+        "retrieved_at": "2026-11-16T23:02:57.928302+00:00",
+        "raw_weekly_response": [
+          {
+            "week": 1794700800,
+            "total": 581,
+            "days": [
+              364,
+              217,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "week": 1794096000,
+            "total": 2165,
+            "days": [
+              205,
+              247,
+              194,
+              406,
+              441,
+              338,
+              334
+            ]
+          },
+          {
+            "week": 1793491200,
+            "total": 2223,
+            "days": [
+              567,
+              390,
+              341,
+              357,
+              200,
+              148,
+              220
+            ]
+          },
+          {
+            "week": 1792886400,
+            "total": 5013,
+            "days": [
+              1194,
+              996,
+              573,
+              641,
+              588,
+              508,
+              513
+            ]
+          },
+          {
+            "week": 1792281600,
+            "total": 992,
+            "days": [
+              68,
+              157,
+              127,
+              131,
+              134,
+              175,
+              200
+            ]
+          },
+          {
+            "week": 1791676800,
+            "total": 477,
+            "days": [
+              58,
+              69,
+              86,
+              72,
+              67,
+              60,
+              65
+            ]
+          },
+          {
+            "week": 1791072000,
+            "total": 443,
+            "days": [
+              47,
+              54,
+              103,
+              60,
+              76,
+              57,
+              46
+            ]
+          },
+          {
+            "week": 1790467200,
+            "total": 503,
+            "days": [
+              70,
+              83,
+              75,
+              86,
+              83,
+              54,
+              52
+            ]
+          }
+        ],
+        "selected_daily_bins": [
+          {
+            "label_date": "2026-10-17",
+            "stars_created": 65,
+            "week_epoch": 1791676800,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-18",
+            "stars_created": 68,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-19",
+            "stars_created": 157,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-20",
+            "stars_created": 127,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-21",
+            "stars_created": 131,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-22",
+            "stars_created": 134,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-23",
+            "stars_created": 175,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-24",
+            "stars_created": 200,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-25",
+            "stars_created": 1194,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-26",
+            "stars_created": 996,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-27",
+            "stars_created": 573,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-28",
+            "stars_created": 641,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-29",
+            "stars_created": 588,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-30",
+            "stars_created": 508,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-31",
+            "stars_created": 513,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-01",
+            "stars_created": 567,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-02",
+            "stars_created": 390,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-03",
+            "stars_created": 341,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-04",
+            "stars_created": 357,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-05",
+            "stars_created": 200,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-06",
+            "stars_created": 148,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-07",
+            "stars_created": 220,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-08",
+            "stars_created": 205,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-09",
+            "stars_created": 247,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-10",
+            "stars_created": 194,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-11",
+            "stars_created": 406,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-12",
+            "stars_created": 441,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-13",
+            "stars_created": 338,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-14",
+            "stars_created": 334,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-15",
+            "stars_created": 364,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-16",
+            "stars_created": 217,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 1
+          }
+        ],
+        "selected_bin_count": 31,
+        "stars_created_in_selected_bins": 11039,
+        "metric_kind": "derived_sum_of_observed_provider_daily_counts",
+        "interval_interpretation": "Provider-calendar bins labelled 2026-10-17 through 2026-11-16, inclusive. Labels derived from week epoch + Sunday-first index; not an exact UTC interval.",
+        "utc_boundaries_verified": false,
+        "net_growth_verified": false,
+        "last_bin_partial": true,
+        "latest_nonpartial_comparison": {
+          "recent_labels": [
+            "2026-11-09",
+            "2026-11-15"
+          ],
+          "recent_stars_created": 2324,
+          "previous_labels": [
+            "2026-11-02",
+            "2026-11-08"
+          ],
+          "previous_stars_created": 1861,
+          "ratio": 1.2488,
+          "metric_kind": "derived; provider-day bins; no causal or forecast interpretation"
+        }
+      },
+      "theme": null
+    },
+    {
+      "repository": "Vincentwei1021/video-shotcraft",
+      "url": "https://github.com/Vincentwei1021/video-shotcraft",
+      "license_detected": "Apache-2.0",
+      "head_revision_observed": "42f922fe076f6428814d10f6184caf22a8b2adc2",
+      "monthly": {
+        "source_id": "monthly_html",
+        "url": "https://github.com/trending?since=monthly",
+        "retrieved_at": "2026-11-16T23:01:10.552273+00:00",
+        "page_position": 14,
+        "stars_this_month": 7937,
+        "metric_kind": "observed_display_value",
+        "exact_start": null,
+        "exact_end": null,
+        "timezone": null,
+        "scope": "GitHub label: stars this month; not assumed equal to requested dates"
+      },
+      "history": {
+        "source_id": "history_13",
+        "url": "https://api.github.com/repos/Vincentwei1021/video-shotcraft/stargazers/history?per_page=8&page=1",
+        "retrieved_at": "2026-11-16T23:02:58.329163+00:00",
+        "raw_weekly_response": [
+          {
+            "week": 1794700800,
+            "total": 818,
+            "days": [
+              518,
+              300,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "week": 1794096000,
+            "total": 2068,
+            "days": [
+              308,
+              285,
+              285,
+              296,
+              204,
+              199,
+              491
+            ]
+          },
+          {
+            "week": 1793491200,
+            "total": 2158,
+            "days": [
+              411,
+              320,
+              433,
+              395,
+              229,
+              197,
+              173
+            ]
+          },
+          {
+            "week": 1792886400,
+            "total": 2120,
+            "days": [
+              181,
+              265,
+              277,
+              266,
+              428,
+              351,
+              352
+            ]
+          },
+          {
+            "week": 1792281600,
+            "total": 1162,
+            "days": [
+              124,
+              132,
+              132,
+              144,
+              232,
+              214,
+              184
+            ]
+          },
+          {
+            "week": 1791676800,
+            "total": 1117,
+            "days": [
+              148,
+              226,
+              228,
+              166,
+              142,
+              103,
+              104
+            ]
+          },
+          {
+            "week": 1791072000,
+            "total": 930,
+            "days": [
+              21,
+              96,
+              105,
+              252,
+              181,
+              141,
+              134
+            ]
+          },
+          {
+            "week": 1790467200,
+            "total": 633,
+            "days": [
+              93,
+              123,
+              91,
+              112,
+              157,
+              57,
+              0
+            ]
+          }
+        ],
+        "selected_daily_bins": [
+          {
+            "label_date": "2026-10-17",
+            "stars_created": 104,
+            "week_epoch": 1791676800,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-18",
+            "stars_created": 124,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-19",
+            "stars_created": 132,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-20",
+            "stars_created": 132,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-21",
+            "stars_created": 144,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-22",
+            "stars_created": 232,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-23",
+            "stars_created": 214,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-24",
+            "stars_created": 184,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-25",
+            "stars_created": 181,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-26",
+            "stars_created": 265,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-27",
+            "stars_created": 277,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-28",
+            "stars_created": 266,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-29",
+            "stars_created": 428,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-30",
+            "stars_created": 351,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-31",
+            "stars_created": 352,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-01",
+            "stars_created": 411,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-02",
+            "stars_created": 320,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-03",
+            "stars_created": 433,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-04",
+            "stars_created": 395,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-05",
+            "stars_created": 229,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-06",
+            "stars_created": 197,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-07",
+            "stars_created": 173,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-08",
+            "stars_created": 308,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-09",
+            "stars_created": 285,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-10",
+            "stars_created": 285,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-11",
+            "stars_created": 296,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-12",
+            "stars_created": 204,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-13",
+            "stars_created": 199,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-14",
+            "stars_created": 491,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-15",
+            "stars_created": 518,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-16",
+            "stars_created": 300,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 1
+          }
+        ],
+        "selected_bin_count": 31,
+        "stars_created_in_selected_bins": 8430,
+        "metric_kind": "derived_sum_of_observed_provider_daily_counts",
+        "interval_interpretation": "Provider-calendar bins labelled 2026-10-17 through 2026-11-16, inclusive. Labels derived from week epoch + Sunday-first index; not an exact UTC interval.",
+        "utc_boundaries_verified": false,
+        "net_growth_verified": false,
+        "last_bin_partial": true,
+        "latest_nonpartial_comparison": {
+          "recent_labels": [
+            "2026-11-09",
+            "2026-11-15"
+          ],
+          "recent_stars_created": 2278,
+          "previous_labels": [
+            "2026-11-02",
+            "2026-11-08"
+          ],
+          "previous_stars_created": 2055,
+          "ratio": 1.1085,
+          "metric_kind": "derived; provider-day bins; no causal or forecast interpretation"
+        }
+      },
+      "theme": null
+    },
+    {
+      "repository": "vercel-labs/agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "license_detected": "Apache-2.0",
+      "head_revision_observed": "b06e2533ba9b3823b8a96c859d455cb55f4d7893",
+      "monthly": {
+        "source_id": "monthly_html",
+        "url": "https://github.com/trending?since=monthly",
+        "retrieved_at": "2026-11-16T23:01:10.552273+00:00",
+        "page_position": 15,
+        "stars_this_month": 7545,
+        "metric_kind": "observed_display_value",
+        "exact_start": null,
+        "exact_end": null,
+        "timezone": null,
+        "scope": "GitHub label: stars this month; not assumed equal to requested dates"
+      },
+      "history": {
+        "source_id": "history_14",
+        "url": "https://api.github.com/repos/vercel-labs/agent-browser/stargazers/history?per_page=8&page=1",
+        "retrieved_at": "2026-11-16T23:02:58.407120+00:00",
+        "raw_weekly_response": [
+          {
+            "week": 1794700800,
+            "total": 682,
+            "days": [
+              452,
+              230,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "week": 1794096000,
+            "total": 4306,
+            "days": [
+              894,
+              790,
+              725,
+              612,
+              396,
+              404,
+              485
+            ]
+          },
+          {
+            "week": 1793491200,
+            "total": 2041,
+            "days": [
+              127,
+              153,
+              131,
+              136,
+              554,
+              229,
+              711
+            ]
+          },
+          {
+            "week": 1792886400,
+            "total": 532,
+            "days": [
+              55,
+              71,
+              71,
+              74,
+              83,
+              66,
+              112
+            ]
+          },
+          {
+            "week": 1792281600,
+            "total": 410,
+            "days": [
+              56,
+              91,
+              53,
+              54,
+              51,
+              49,
+              56
+            ]
+          },
+          {
+            "week": 1791676800,
+            "total": 408,
+            "days": [
+              52,
+              44,
+              70,
+              66,
+              69,
+              47,
+              60
+            ]
+          },
+          {
+            "week": 1791072000,
+            "total": 340,
+            "days": [
+              36,
+              35,
+              40,
+              56,
+              67,
+              52,
+              54
+            ]
+          },
+          {
+            "week": 1790467200,
+            "total": 286,
+            "days": [
+              52,
+              37,
+              61,
+              37,
+              31,
+              34,
+              34
+            ]
+          }
+        ],
+        "selected_daily_bins": [
+          {
+            "label_date": "2026-10-17",
+            "stars_created": 60,
+            "week_epoch": 1791676800,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-18",
+            "stars_created": 56,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-19",
+            "stars_created": 91,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-20",
+            "stars_created": 53,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-21",
+            "stars_created": 54,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-22",
+            "stars_created": 51,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-23",
+            "stars_created": 49,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-24",
+            "stars_created": 56,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-25",
+            "stars_created": 55,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-26",
+            "stars_created": 71,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-27",
+            "stars_created": 71,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-28",
+            "stars_created": 74,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-29",
+            "stars_created": 83,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-30",
+            "stars_created": 66,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-31",
+            "stars_created": 112,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-01",
+            "stars_created": 127,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-02",
+            "stars_created": 153,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-03",
+            "stars_created": 131,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-04",
+            "stars_created": 136,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-05",
+            "stars_created": 554,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-06",
+            "stars_created": 229,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-07",
+            "stars_created": 711,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-08",
+            "stars_created": 894,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-09",
+            "stars_created": 790,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-10",
+            "stars_created": 725,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-11",
+            "stars_created": 612,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-12",
+            "stars_created": 396,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-13",
+            "stars_created": 404,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-14",
+            "stars_created": 485,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-15",
+            "stars_created": 452,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-16",
+            "stars_created": 230,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 1
+          }
+        ],
+        "selected_bin_count": 31,
+        "stars_created_in_selected_bins": 8031,
+        "metric_kind": "derived_sum_of_observed_provider_daily_counts",
+        "interval_interpretation": "Provider-calendar bins labelled 2026-10-17 through 2026-11-16, inclusive. Labels derived from week epoch + Sunday-first index; not an exact UTC interval.",
+        "utc_boundaries_verified": false,
+        "net_growth_verified": false,
+        "last_bin_partial": true,
+        "latest_nonpartial_comparison": {
+          "recent_labels": [
+            "2026-11-09",
+            "2026-11-15"
+          ],
+          "recent_stars_created": 3864,
+          "previous_labels": [
+            "2026-11-02",
+            "2026-11-08"
+          ],
+          "previous_stars_created": 2808,
+          "ratio": 1.3761,
+          "metric_kind": "derived; provider-day bins; no causal or forecast interpretation"
+        }
+      },
+      "theme": null
+    },
+    {
+      "repository": "anthropics/knowledge-work-plugins",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "license_detected": "Apache-2.0",
+      "head_revision_observed": "e91a134584eb798bac7fb0379358006a2b63b965",
+      "monthly": {
+        "source_id": "monthly_html",
+        "url": "https://github.com/trending?since=monthly",
+        "retrieved_at": "2026-11-16T23:01:10.552273+00:00",
+        "page_position": 12,
+        "stars_this_month": 6417,
+        "metric_kind": "observed_display_value",
+        "exact_start": null,
+        "exact_end": null,
+        "timezone": null,
+        "scope": "GitHub label: stars this month; not assumed equal to requested dates"
+      },
+      "history": {
+        "source_id": "history_11",
+        "url": "https://api.github.com/repos/anthropics/knowledge-work-plugins/stargazers/history?per_page=8&page=1",
+        "retrieved_at": "2026-11-16T23:02:58.003708+00:00",
+        "raw_weekly_response": [
+          {
+            "week": 1794700800,
+            "total": 340,
+            "days": [
+              268,
+              72,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "week": 1794096000,
+            "total": 837,
+            "days": [
+              93,
+              47,
+              120,
+              103,
+              105,
+              83,
+              286
+            ]
+          },
+          {
+            "week": 1793491200,
+            "total": 930,
+            "days": [
+              173,
+              120,
+              133,
+              131,
+              133,
+              134,
+              106
+            ]
+          },
+          {
+            "week": 1792886400,
+            "total": 1533,
+            "days": [
+              335,
+              240,
+              211,
+              212,
+              192,
+              184,
+              159
+            ]
+          },
+          {
+            "week": 1792281600,
+            "total": 2709,
+            "days": [
+              236,
+              283,
+              347,
+              336,
+              555,
+              598,
+              354
+            ]
+          },
+          {
+            "week": 1791676800,
+            "total": 1128,
+            "days": [
+              246,
+              229,
+              182,
+              133,
+              114,
+              90,
+              134
+            ]
+          },
+          {
+            "week": 1791072000,
+            "total": 2888,
+            "days": [
+              55,
+              127,
+              443,
+              546,
+              629,
+              592,
+              496
+            ]
+          },
+          {
+            "week": 1790467200,
+            "total": 380,
+            "days": [
+              91,
+              33,
+              76,
+              62,
+              23,
+              42,
+              53
+            ]
+          }
+        ],
+        "selected_daily_bins": [
+          {
+            "label_date": "2026-10-17",
+            "stars_created": 134,
+            "week_epoch": 1791676800,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-18",
+            "stars_created": 236,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-19",
+            "stars_created": 283,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-20",
+            "stars_created": 347,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-21",
+            "stars_created": 336,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-22",
+            "stars_created": 555,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-23",
+            "stars_created": 598,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-24",
+            "stars_created": 354,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-25",
+            "stars_created": 335,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-26",
+            "stars_created": 240,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-27",
+            "stars_created": 211,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-28",
+            "stars_created": 212,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-29",
+            "stars_created": 192,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-30",
+            "stars_created": 184,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-31",
+            "stars_created": 159,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-01",
+            "stars_created": 173,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-02",
+            "stars_created": 120,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-03",
+            "stars_created": 133,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-04",
+            "stars_created": 131,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-05",
+            "stars_created": 133,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-06",
+            "stars_created": 134,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-07",
+            "stars_created": 106,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-08",
+            "stars_created": 93,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-09",
+            "stars_created": 47,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-10",
+            "stars_created": 120,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-11",
+            "stars_created": 103,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-12",
+            "stars_created": 105,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-13",
+            "stars_created": 83,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-14",
+            "stars_created": 286,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-15",
+            "stars_created": 268,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-16",
+            "stars_created": 72,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 1
+          }
+        ],
+        "selected_bin_count": 31,
+        "stars_created_in_selected_bins": 6483,
+        "metric_kind": "derived_sum_of_observed_provider_daily_counts",
+        "interval_interpretation": "Provider-calendar bins labelled 2026-10-17 through 2026-11-16, inclusive. Labels derived from week epoch + Sunday-first index; not an exact UTC interval.",
+        "utc_boundaries_verified": false,
+        "net_growth_verified": false,
+        "last_bin_partial": true,
+        "latest_nonpartial_comparison": {
+          "recent_labels": [
+            "2026-11-09",
+            "2026-11-15"
+          ],
+          "recent_stars_created": 1012,
+          "previous_labels": [
+            "2026-11-02",
+            "2026-11-08"
+          ],
+          "previous_stars_created": 850,
+          "ratio": 1.1906,
+          "metric_kind": "derived; provider-day bins; no causal or forecast interpretation"
+        }
+      },
+      "theme": null
+    },
+    {
+      "repository": "backnotprop/plannotator",
+      "url": "https://github.com/backnotprop/plannotator",
+      "license_detected": "Apache-2.0",
+      "head_revision_observed": "a7350d393ba7c0a3ee488c05e26e3fb9b5d677ff",
+      "monthly": {
+        "source_id": "monthly_html",
+        "url": "https://github.com/trending?since=monthly",
+        "retrieved_at": "2026-11-16T23:01:10.552273+00:00",
+        "page_position": 13,
+        "stars_this_month": 2237,
+        "metric_kind": "observed_display_value",
+        "exact_start": null,
+        "exact_end": null,
+        "timezone": null,
+        "scope": "GitHub label: stars this month; not assumed equal to requested dates"
+      },
+      "history": {
+        "source_id": "history_12",
+        "url": "https://api.github.com/repos/backnotprop/plannotator/stargazers/history?per_page=8&page=1",
+        "retrieved_at": "2026-11-16T23:02:57.945379+00:00",
+        "raw_weekly_response": [
+          {
+            "week": 1794700800,
+            "total": 1127,
+            "days": [
+              696,
+              431,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "week": 1794096000,
+            "total": 1518,
+            "days": [
+              32,
+              51,
+              55,
+              100,
+              110,
+              361,
+              809
+            ]
+          },
+          {
+            "week": 1793491200,
+            "total": 106,
+            "days": [
+              24,
+              17,
+              10,
+              15,
+              19,
+              11,
+              10
+            ]
+          },
+          {
+            "week": 1792886400,
+            "total": 181,
+            "days": [
+              23,
+              44,
+              31,
+              28,
+              27,
+              18,
+              10
+            ]
+          },
+          {
+            "week": 1792281600,
+            "total": 157,
+            "days": [
+              25,
+              23,
+              23,
+              19,
+              15,
+              28,
+              24
+            ]
+          },
+          {
+            "week": 1791676800,
+            "total": 156,
+            "days": [
+              16,
+              35,
+              26,
+              19,
+              28,
+              19,
+              13
+            ]
+          },
+          {
+            "week": 1791072000,
+            "total": 216,
+            "days": [
+              13,
+              20,
+              28,
+              25,
+              31,
+              61,
+              38
+            ]
+          },
+          {
+            "week": 1790467200,
+            "total": 146,
+            "days": [
+              23,
+              29,
+              29,
+              15,
+              15,
+              16,
+              19
+            ]
+          }
+        ],
+        "selected_daily_bins": [
+          {
+            "label_date": "2026-10-17",
+            "stars_created": 13,
+            "week_epoch": 1791676800,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-18",
+            "stars_created": 25,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-19",
+            "stars_created": 23,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-20",
+            "stars_created": 23,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-21",
+            "stars_created": 19,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-22",
+            "stars_created": 15,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-23",
+            "stars_created": 28,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-24",
+            "stars_created": 24,
+            "week_epoch": 1792281600,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-10-25",
+            "stars_created": 23,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-10-26",
+            "stars_created": 44,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-10-27",
+            "stars_created": 31,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-10-28",
+            "stars_created": 28,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-10-29",
+            "stars_created": 27,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-10-30",
+            "stars_created": 18,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-10-31",
+            "stars_created": 10,
+            "week_epoch": 1792886400,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-01",
+            "stars_created": 24,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-02",
+            "stars_created": 17,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-03",
+            "stars_created": 10,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-04",
+            "stars_created": 15,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-05",
+            "stars_created": 19,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-06",
+            "stars_created": 11,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-07",
+            "stars_created": 10,
+            "week_epoch": 1793491200,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-08",
+            "stars_created": 32,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-09",
+            "stars_created": 51,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 1
+          },
+          {
+            "label_date": "2026-11-10",
+            "stars_created": 55,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 2
+          },
+          {
+            "label_date": "2026-11-11",
+            "stars_created": 100,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 3
+          },
+          {
+            "label_date": "2026-11-12",
+            "stars_created": 110,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 4
+          },
+          {
+            "label_date": "2026-11-13",
+            "stars_created": 361,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 5
+          },
+          {
+            "label_date": "2026-11-14",
+            "stars_created": 809,
+            "week_epoch": 1794096000,
+            "sunday_first_index": 6
+          },
+          {
+            "label_date": "2026-11-15",
+            "stars_created": 696,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 0
+          },
+          {
+            "label_date": "2026-11-16",
+            "stars_created": 431,
+            "week_epoch": 1794700800,
+            "sunday_first_index": 1
+          }
+        ],
+        "selected_bin_count": 31,
+        "stars_created_in_selected_bins": 3102,
+        "metric_kind": "derived_sum_of_observed_provider_daily_counts",
+        "interval_interpretation": "Provider-calendar bins labelled 2026-10-17 through 2026-11-16, inclusive. Labels derived from week epoch + Sunday-first index; not an exact UTC interval.",
+        "utc_boundaries_verified": false,
+        "net_growth_verified": false,
+        "last_bin_partial": true,
+        "latest_nonpartial_comparison": {
+          "recent_labels": [
+            "2026-11-09",
+            "2026-11-15"
+          ],
+          "recent_stars_created": 2182,
+          "previous_labels": [
+            "2026-11-02",
+            "2026-11-08"
+          ],
+          "previous_stars_created": 114,
+          "ratio": 19.1404,
+          "metric_kind": "derived; provider-day bins; no causal or forecast interpretation"
+        }
+      },
+      "theme": null
+    }
+  ],
+  "limit": "Provider-calendar additions and rolling monthly labels, not audited exact UTC net growth or adoption. Purposive AI-heavy sample, not GitHub market share."
+}

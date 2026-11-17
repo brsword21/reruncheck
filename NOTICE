@@ -1,0 +1,9 @@
+Reruncheck
+Copyright 2026 Mikołaj Stawicki
+
+Licensed under the Apache License, Version 2.0.
+See LICENSE for the full terms.
+
+The package implementation and demonstration fixtures are original.
+Referenced research projects are credited in docs/research.md; their source
+code, branding and fixtures are not bundled by virtue of being cited.

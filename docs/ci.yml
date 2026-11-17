@@ -1,0 +1,40 @@
+# Copy to .github/workflows/ci.yml when GitHub credentials permit workflow writes.
+# This file is a prepared CI template, not evidence of a successful hosted run.
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python: ['3.10', '3.12']
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a
+      - uses: actions/setup-python@90485b7ad25ff6932f80015b8a56a6546cd816a7
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install '.[dev]'
+      - run: python -m pytest -q
+      - run: python -m ruff check .
+      - run: python -m build
+      - name: Verify wheel outside checkout and both outcome paths
+        shell: bash
+        run: |
+          python -m venv "$RUNNER_TEMP/reruncheck-wheel"
+          "$RUNNER_TEMP/reruncheck-wheel/bin/python" -m pip install --no-deps dist/*.whl
+          cd "$RUNNER_TEMP"
+          "$RUNNER_TEMP/reruncheck-wheel/bin/reruncheck" --help
+          "$RUNNER_TEMP/reruncheck-wheel/bin/reruncheck" demo --case stable --json
+          set +e
+          "$RUNNER_TEMP/reruncheck-wheel/bin/reruncheck" demo --case broken --json
+          result=$?
+          set -e
+          test "$result" -eq 1

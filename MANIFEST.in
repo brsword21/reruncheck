@@ -1,0 +1,4 @@
+include LICENSE NOTICE README.md SPEC.md CHANGELOG.md CONTRIBUTING.md SECURITY.md
+recursive-include docs *.md *.yml
+recursive-include research *.json
+recursive-include tests *.py *.md
